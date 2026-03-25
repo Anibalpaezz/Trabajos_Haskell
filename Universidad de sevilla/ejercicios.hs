@@ -2,6 +2,8 @@
 
 module Ejercicios where
 
+doblete x = x + x
+
 factorial :: Int -> Int -- Declaramos el tipo de la funcion, toma un entero y devuelve un entero
 factorial 0 = 1 -- Caso base, el factorial de 0 es 1
 factorial n = n * factorial (n - 1) -- Caso recursivo, el factorial de n es n multiplicado por el factorial de n-1
@@ -80,3 +82,26 @@ cuadrado x = x * x
 -- Ejercicio 5
 sumaCuadrados :: [Int] -> Int
 sumaCuadrados l = sum (map cuadrado l)
+
+-- Ejercicio 6
+raices :: Double -> Double -> Double -> [Double]
+raices a b c = [ (-b+sqrt(b*b-4*a*c))/(2*a),(-b-sqrt(b*b-4*a*c))/(2*a) ]
+
+-- Ejercicio 7
+n_abs_1 :: (Num a, Ord a) => a -> a
+n_abs_1 x = if x > 0 then x else (-x)
+
+-- Ejercicio 8
+signum_1 :: (Num a, Ord a) => a -> a
+signum_1 x = if x > 0 then 1 else if x == 0 then 0 else (-1)
+
+{-
+n_signum x
+| x > 0 = 1
+| x == 0 = 0
+| otherwise = -1
+-}
+
+-- Ejercicio 9
+
+

@@ -1,4 +1,4 @@
-To install haskell in windows the best option is using cmd with this command:
+To install haskell in windows the best option is using powershell with this command:
 Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; try { & ([ScriptBlock]::Create((Invoke-WebRequest https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -Interactive -DisableCurl } catch { Write-Error $_ }
 
 In case you need to install it in linux or macOS the command is this one:
