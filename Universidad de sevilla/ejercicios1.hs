@@ -1,6 +1,6 @@
 -- Ejercicio 1.1. Definir la función factorial tal que factorial n es el factorial de n.
 
-module Ejercicios where
+module Ejercicios1 where
 
 doblete x = x + x
 
@@ -49,7 +49,7 @@ elementos tomados de k en k
 comb :: Int -> Int -> Int
 comb n k = factorial n `div` (factorial k * factorial (n - k))
 
--- Ejercicio 3 Definir la función impar tal que impar x se verifica si el número x es impar
+-- Ejercicio 1.3 Definir la función impar tal que impar x se verifica si el número x es impar
 impar :: Int -> Bool
 impar n = n `mod` 2 == 1
 
@@ -75,23 +75,23 @@ impar4_aux (n+2) = impar4_aux n
 
 -}
 
--- Ejercicio 4 Definir la función cuadrado tal que cuadrado x es el cuadrado del número x
+-- Ejercicio 1.4 Definir la función cuadrado tal que cuadrado x es el cuadrado del número x
 cuadrado :: Int -> Int
 cuadrado x = x * x
 
--- Ejercicio 5
+-- Ejercicio 1.5
 sumaCuadrados :: [Int] -> Int
 sumaCuadrados l = sum (map cuadrado l)
 
--- Ejercicio 6
+-- Ejercicio 1.6
 raices :: Double -> Double -> Double -> [Double]
 raices a b c = [ (-b+sqrt(b*b-4*a*c))/(2*a),(-b-sqrt(b*b-4*a*c))/(2*a) ]
 
--- Ejercicio 7
+-- Ejercicio 1.7
 n_abs_1 :: (Num a, Ord a) => a -> a
 n_abs_1 x = if x > 0 then x else (-x)
 
--- Ejercicio 8
+-- Ejercicio 1.8
 signum_1 :: (Num a, Ord a) => a -> a
 signum_1 x = if x > 0 then 1 else if x == 0 then 0 else (-1)
 
@@ -102,6 +102,18 @@ n_signum x
 | otherwise = -1
 -}
 
--- Ejercicio 9
+-- Ejercicio 1.9 Redefinir la función && tal que x && y es la conjunción de x e y
+and_1 :: Bool -> Bool -> Bool
+and_1 x y = if x then y else False
 
+-- Ejercicio 1.10 Definir la función anterior tal que anterior x es el anterior del número x.
+anterior :: Int -> Int
+anterior x = x - 1
 
+-- Ejercicio 1.11 Redefinir la función potencia tal que potencia x y es x elevado a la potencia y
+potencia :: Double -> Double -> Double
+potencia x y = x ^ y
+
+-- Ejercicio 1.12 Redefinir la función id tal que id x es x
+id :: a -> a
+id x = x
